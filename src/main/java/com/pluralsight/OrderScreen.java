@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import static com.pluralsight.AddSandwich.AddSammy;
 import static com.pluralsight.GlobalMethods.ans;
 
 public class OrderScreen {
@@ -14,6 +15,7 @@ public class OrderScreen {
         int orderChoice = ans("Enter here: \n");
         switch (orderChoice){
             case 1:
+                AddSammy();
                 break;
             case 2:
                 break;
