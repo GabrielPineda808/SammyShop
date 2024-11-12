@@ -13,7 +13,7 @@ public class AddSandwich {
         sandwich.addRegularToppings(regularToppings());
         sandwich.addPremiumToppings(premiumToppings());
         sandwich.addCheese(cheese());
-
+        sandwich.toast();
 
     }
 }
