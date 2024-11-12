@@ -2,13 +2,16 @@ package com.pluralsight;
 
 import java.util.ArrayList;
 
+import static com.pluralsight.GlobalMethods.ans;
+
 public class Sandwich {
     private String bread;
     private boolean isToasted = false;
     private int size;
     private double price;
-    ArrayList<String> regularTopping;
-    ArrayList<String> premiumTopping;
+    ArrayList<String> regularTopping = new ArrayList<>();
+    ArrayList<String> premiumTopping = new ArrayList<>();
+    ArrayList<String> cheese = new ArrayList<>();
 
     public Sandwich(int size ,String bread) {
         this.bread = bread;
@@ -31,12 +34,15 @@ public class Sandwich {
         this.bread = bread;
     }
 
-    public boolean isToasted() {
-        return isToasted;
-    }
+    public void toast() {
+        int toasted = ans("\n Would like your sandwich toasted? Enter y/n below :)");
+        if(toasted == 1){
+            isToasted= true;
+        }else if( toasted != 2) {
+            System.out.println("\nEnter a proper toasting options :)\n");
+            toast();
+        }
 
-    public void setToasted(boolean toasted) {
-        isToasted = toasted;
     }
 
     public double getPrice() {
@@ -48,18 +54,27 @@ public class Sandwich {
             case 4:
                 this.price+= 5.50;
                 if(!premiumTopping.isEmpty()){
-                    this.price +=1.00 + (premiumTopping.size() -1 * .50);
+                    this.price +=1.00 + ((premiumTopping.size() -1) * 0.50);
+                }
+                if(!cheese.isEmpty()){
+                    this.price += 0.75 + ((cheese.size() -1) * 0.30);
                 }
                 break;
             case 8:
                 this.price+= 7.00;
                 if(!premiumTopping.isEmpty()){
-                    this.price +=2.00+ (premiumTopping.size() -1 * 1.00);
+                    this.price +=2.00+ ((premiumTopping.size())-1 * 1.00);
+                }
+                if(!cheese.isEmpty()){
+                    this.price += 1.50 + ((cheese.size() -1) * 0.60);
                 }
                 break;
             case 12:
                 if(!premiumTopping.isEmpty()){
-                    this.price +=3.00+ (premiumTopping.size() -1 * 1.50);
+                    this.price +=3.00+ ((premiumTopping.size()) -1 * 1.50);
+                }
+                if(!cheese.isEmpty()){
+                    this.price += 2.25 + ((cheese.size() -1) * 0.90);
                 }
                 this.price+= 8.50;
                 break;
@@ -67,18 +82,18 @@ public class Sandwich {
     }
 
     public void addRegularToppings(ArrayList<String> toppings){
-        for(String t : toppings){
-            regularTopping.add(t);
-        }
+        regularTopping.addAll(toppings);
     }
 
     public void addPremiumToppings(ArrayList<String> toppings){
-        for(String t : toppings){
-            premiumTopping.add(t);
-        }
+        premiumTopping.addAll(toppings);
     }
 
-    public void removeRegulareToppings(String topping){
+    public void addCheese(ArrayList<String> cheese){
+        this.cheese.addAll(cheese);
+    }
+
+    public void removeRegularToppings(String topping){
         for(String t : regularTopping){
             regularTopping.remove(topping);
         }
@@ -88,5 +103,9 @@ public class Sandwich {
         for(String t : premiumTopping){
             premiumTopping.remove(topping);
         }
+    }
+
+    public void display(){
+
     }
 }
