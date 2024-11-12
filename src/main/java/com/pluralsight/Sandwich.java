@@ -1,7 +1,6 @@
 package com.pluralsight;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Sandwich {
     private String bread;
@@ -14,8 +13,6 @@ public class Sandwich {
         this.bread = bread;
         this.isToasted = isToasted;
         this.price = price;
-        this.regularTopping = regularTopping;
-        this.premiumTopping = premiumTopping;
     }
 
     public String getBread() {
@@ -51,6 +48,18 @@ public class Sandwich {
     public void addPremiumToppings(ArrayList<String> toppings){
         for(String t : toppings){
             premiumTopping.add(t);
+        }
+    }
+
+    public void removeRegulareToppings(String topping){
+        for(String t : regularTopping){
+            regularTopping.remove(topping);
+        }
+    }
+
+    public void removePremiumToppings(String topping){
+        for(String t : premiumTopping){
+            premiumTopping.remove(topping);
         }
     }
 }
