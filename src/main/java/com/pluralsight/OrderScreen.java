@@ -11,17 +11,17 @@ public class OrderScreen {
                 "( 3 ) - Add Chips\n" +
                 "( 4 ) - Checkout\n" +
                 "( 5 ) - Cancel Order\n");
-        String orderChoice = ans("Enter here: ");
+        int orderChoice = ans("Enter here: \n");
         switch (orderChoice){
-            case "1":
+            case 1:
                 break;
-            case "2":
+            case 2:
                 break;
-            case "3":
+            case 3:
                 break;
-            case "4":
+            case 4:
                 break;
-            case "5":
+            case 5:
                 break;
             default:
                 System.out.println("\nThat is not a proper choice please enter again.");
