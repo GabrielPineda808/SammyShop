@@ -2,6 +2,7 @@ package com.pluralsight;
 
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.OrderScreen.order;
 import static java.lang.System.exit;
 
 public class HomeScreen {
@@ -16,7 +17,7 @@ public class HomeScreen {
 
         switch (option){
             case "1":
-                makeSandwhich();
+                order();
                 break;
             case "2":
                 System.out.println("Thank you for visiting SammyShop! Have a great day!\n");
