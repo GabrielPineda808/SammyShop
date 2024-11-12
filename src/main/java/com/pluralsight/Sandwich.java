@@ -35,7 +35,9 @@ public class Sandwich {
     }
 
     public void toast() {
-        int toasted = ans("\n Would like your sandwich toasted? Enter y/n below :)");
+        int toasted = ans("\n Would like your sandwich toasted? \n" +
+                "( 1 ) - Yes \n" +
+                "( 2 ) - No \n");
         if(toasted == 1){
             isToasted= true;
         }else if( toasted != 2) {
@@ -46,10 +48,6 @@ public class Sandwich {
     }
 
     public double getPrice() {
-        return price;
-    }
-
-    public void setPrice() {
         switch (this.size){
             case 4:
                 this.price+= 5.50;
@@ -79,6 +77,7 @@ public class Sandwich {
                 this.price+= 8.50;
                 break;
         }
+        return price;
     }
 
     public void addRegularToppings(ArrayList<String> toppings){
