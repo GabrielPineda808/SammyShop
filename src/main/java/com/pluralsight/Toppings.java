@@ -72,34 +72,27 @@ public class Toppings {
             switch (topping){
                 case 1:
                     premiumToppings.add("Steak");
-                    premiumToppings();
                     break;
                 case 2:
                     premiumToppings.add("Ham");
-                    premiumToppings();
                     break;
                 case 3:
                     premiumToppings.add("Salami");
-                    premiumToppings();
                     break;
                 case 4:
                     premiumToppings.add("Roast Beef");
-                    premiumToppings();
                     break;
                 case 5:
                     premiumToppings.add("Chicken");
-                    premiumToppings();
                     break;
                 case 6:
                     premiumToppings.add("Bacon");
-                    premiumToppings();
                     break;
                 case 0:
                     System.out.println("All premium toppings have been added.");
                     break loop;
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
-                    premiumToppings();
             }
         }
 
@@ -121,26 +114,21 @@ public class Toppings {
             switch (c){
                 case 1:
                     cheeses.add("American");
-                    cheese();
                     break;
                 case 2:
                     cheeses.add("Provolone");
-                    cheese();
                     break;
                 case 3:
                     cheeses.add("Cheddar");
-                    cheese();
                     break;
                 case 4:
                     cheeses.add("Swiss");
-                    cheese();
                     break;
                 case 0:
                     System.out.println("All cheese has been added.");
                     break loop;
                 default:
                     System.out.println("That was not a proper cheese choice. Enter again :)");
-                    cheese();
             }
         }
         return cheeses;
