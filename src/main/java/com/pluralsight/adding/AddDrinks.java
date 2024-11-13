@@ -1,10 +1,13 @@
-package com.pluralsight;
+package com.pluralsight.adding;
+
+import com.pluralsight.Items.Drinks;
+import com.pluralsight.Items.Sandwich;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
-import static com.pluralsight.OrderScreen.order;
+import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddDrinks{
     static List<Drinks> drinks = new ArrayList<>();
@@ -77,4 +80,9 @@ public class AddDrinks{
         }
         return "";
     }
+
+    public static List<Drinks> getDrinks(){
+        return drinks;
+    }
+
 }
