@@ -1,6 +1,7 @@
 package com.pluralsight.SandwhichMaterials;
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Bread {
     public static String bread(){
@@ -8,7 +9,8 @@ public class Bread {
                 "( 1 ) - White\n" +
                 "( 2 ) - Wheat\n" +
                 "( 3 ) - Rye\n" +
-                "( 4 ) - Wrap\n");
+                "( 4 ) - Wrap\n" +
+                "( 99 )- Exit\n");
 
         switch (breadChoice){
             case 1 :
@@ -19,6 +21,9 @@ public class Bread {
                 return "Rye";
             case 4:
                 return "Wrap";
+            case 99 :
+                order();
+                break;
             default:
                 System.out.println("That was not a proper bread choice! Please enter again :)\n");
                 bread();

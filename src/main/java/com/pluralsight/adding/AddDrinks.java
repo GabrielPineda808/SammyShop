@@ -59,7 +59,7 @@ public class AddDrinks{
     }
     public static String drinkName(){
         int drinkSize = ans("Select a drink below \n" +
-                "\n( 1 ) - Coke          ( 5 ) - Coffee\n" +
+                "\n( 1 ) - Coke           ( 5 ) - Coffee\n" +
                 "( 2 ) - Sprite         ( 6 ) - Tea\n" +
                 "( 3 ) - Dr. Pepper     ( 0 ) - Water\n" +
                 "( 4 ) - Orange Juice");
