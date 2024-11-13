@@ -6,7 +6,7 @@ import java.util.List;
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.OrderScreen.order;
 
-public class AddChips {
+public class AddChips{
     static List<Chips> chips = new ArrayList<>();
     public static void addChips(){
         System.out.println("\nHere we will add your chips :) \n");
@@ -35,8 +35,8 @@ public class AddChips {
     }
 
     public static String chipsName(){
-        int chipsName = ans("Select chips below \n" +
-                "( 1 ) - Hot Cheetos        ( 4 ) - Fritos\n" +
+        int chipsName = ans("Select chips below: \n" +
+                "\n( 1 ) - Hot Cheetos        ( 4 ) - Fritos\n" +
                 "( 2 ) - Doritos            ( 5 ) - Lays\n" +
                 "( 3 ) - Hot Fries          ( 6 ) - Sun Chips\n");
         switch (chipsName){

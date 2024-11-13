@@ -34,7 +34,7 @@ public class AddDrinks {
 
     public static String drinkSize(){
         int drinkSize = ans("Select a drink size below \n" +
-                "( 1 ) - Small ( $2.00 )\n" +
+                "\n( 1 ) - Small ( $2.00 )\n" +
                 "( 2 ) - Medium ( $ 2.50 )\n" +
                 "( 3 ) - Large ( $3.00 )\n");
         switch (drinkSize){
@@ -52,7 +52,7 @@ public class AddDrinks {
     }
     public static String drinkName(){
         int drinkSize = ans("Select a drink below \n" +
-                "( 1 ) - Coke          ( 5 ) - Coffee\n" +
+                "\n( 1 ) - Coke          ( 5 ) - Coffee\n" +
                 "( 2 ) - Sprite         ( 6 ) - Tea\n" +
                 "( 3 ) - Dr. Pepper     ( 0 ) - Water\n" +
                 "( 4 ) - Orange Juice");

@@ -11,7 +11,7 @@ public class HomeScreen {
 
         int option = ans(
                 "Please select one of the following options below\n" +
-                "( 1 ) - Create New Order\n" +
+                "\n( 1 ) - Create New Order\n" +
                 "( 2 ) - Exit Application\n"
         );
 
