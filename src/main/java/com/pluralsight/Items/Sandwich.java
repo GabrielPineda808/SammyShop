@@ -106,16 +106,16 @@ public class Sandwich extends Orderable {
     }
 
     public void display(){
-        System.out.printf(size + " inch Sandwich on " + bread + "   ----%.2f----\n", getPrice());
-        System.out.println("Meat: ");
+        System.out.printf(size + " inch Sandwich on " + bread + "   ----%.2f----\n", price);
+        if(!premiumTopping.isEmpty()){System.out.println("Meat: ");}
         for(String t : premiumTopping){
             System.out.println("    -"+t);
         }
-        System.out.println("\nCheese: ");
+        if(!cheese.isEmpty()){System.out.println("\nCheese: ");}
         for(String c : cheese){
             System.out.println("    -" + c);
         }
-        System.out.println("\nToppings and Sauce:");
+        if(!regularTopping.isEmpty()){System.out.println("\nToppings and Sauce:");}
         for (String t : regularTopping){
             System.out.println("    -"+ t );
         }
