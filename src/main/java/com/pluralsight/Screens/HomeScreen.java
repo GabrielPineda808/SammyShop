@@ -1,8 +1,8 @@
-package com.pluralsight;
+package com.pluralsight.Screens;
 
 
 import static com.pluralsight.GlobalMethods.ans;
-import static com.pluralsight.OrderScreen.order;
+import static com.pluralsight.Screens.OrderScreen.order;
 import static java.lang.System.exit;
 
 public class HomeScreen {
