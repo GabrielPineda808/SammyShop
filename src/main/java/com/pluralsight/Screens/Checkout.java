@@ -14,17 +14,21 @@ public class Checkout {
         System.out.println("\nLets make sure everything is right before we checkout :)\n" +
                 "\n Please read over your order and order cost before you proceed with checkout.\n");
 
+
         for(Sandwich s: AddSandwich.getSandwiches()){
             total += s.getPrice();
             s.display();
+            System.out.println("\n---------------------\n");
         }
         for (Drinks drink : AddDrinks.getDrinks()){
            total += drink.getPrice();
             drink.display();
+            System.out.println("\n---------------------\n");
         }
         for(Chips chip: AddChips.getChips()){
             total += chip.getPrice();
             chip.display();
+            System.out.println("\n---------------------\n");
         }
     }
 }
