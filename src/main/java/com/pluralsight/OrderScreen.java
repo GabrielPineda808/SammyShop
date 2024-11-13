@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import static com.pluralsight.AddChips.addChips;
+import static com.pluralsight.AddDrinks.addDrinks;
 import static com.pluralsight.AddSandwich.AddSammy;
 import static com.pluralsight.GlobalMethods.ans;
 
@@ -18,8 +20,10 @@ public class OrderScreen {
                 AddSammy();
                 break;
             case 2:
+                addDrinks();
                 break;
             case 3:
+                addChips();
                 break;
             case 4:
                 break;
