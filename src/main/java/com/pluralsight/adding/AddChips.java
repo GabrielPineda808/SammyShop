@@ -41,7 +41,8 @@ public class AddChips{
         int chipsName = ans("Select chips below: \n" +
                 "\n( 1 ) - Hot Cheetos        ( 4 ) - Fritos\n" +
                 "( 2 ) - Doritos            ( 5 ) - Lays\n" +
-                "( 3 ) - Hot Fries          ( 6 ) - Sun Chips\n");
+                "( 3 ) - Hot Fries          ( 6 ) - Sun Chips\n" +
+                "( 99 ) - Exit\n");
         switch (chipsName){
             case 1:
                 return "Hot Cheetos";
@@ -55,6 +56,8 @@ public class AddChips{
                 return "Lays";
             case 6:
                 return "Sun Chips";
+            case 99:
+                order();
             default:
                 System.out.println("That was not a proper choice. Enter again :)\n");
                 chipsName();

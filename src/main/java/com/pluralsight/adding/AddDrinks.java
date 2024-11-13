@@ -39,7 +39,8 @@ public class AddDrinks{
         int drinkSize = ans("Select a drink size below \n" +
                 "\n( 1 ) - Small ( $2.00 )\n" +
                 "( 2 ) - Medium ( $ 2.50 )\n" +
-                "( 3 ) - Large ( $3.00 )\n");
+                "( 3 ) - Large ( $3.00 )\n" +
+                "( 99 ) - Exit");
         switch (drinkSize){
             case 1:
                 return "Small";
@@ -47,6 +48,8 @@ public class AddDrinks{
                 return "Medium";
             case 3:
                 return "Large";
+            case 99 :
+                order();
             default:
                 System.out.println("That was not a proper choice. Enter again :)\n");
                 drinkSize();

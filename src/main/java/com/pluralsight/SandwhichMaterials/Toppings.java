@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Toppings {
     static List<String> regularToppings = new ArrayList<>();
@@ -18,7 +19,8 @@ public class Toppings {
                     "( 2 ) - Peppers      ( 7 ) - Pickles\n" +
                     "( 3 ) - Onions       ( 8 ) - Guacamole\n" +
                     "( 4 ) - Tomatoes     ( 9 ) - Mushrooms\n" +
-                    "( 5 ) - Jalapenos    ( 0 ) - Done with Toppings\n");
+                    "( 5 ) - Jalapenos    ( 0 ) - Done with Toppings\n" +
+                    "( 99 ) - Exit\n");
 
 
             switch (topping) {
@@ -52,6 +54,8 @@ public class Toppings {
                 case 0:
                     System.out.println("All toppings have been added.");
                     break loop;
+                case 99:
+                    order();
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
             }
@@ -67,7 +71,7 @@ public class Toppings {
             int topping = ans("What meat would you like on your sandwich? \n" +
                     "( 1 ) - Steak      ( 6 ) - Bacon\n" +
                     "( 2 ) - Ham        ( 0 ) - Done with Toppings\n" +
-                    "( 3 ) - Salami\n" +
+                    "( 3 ) - Salami     ( 99 )- Exit\n" +
                     "( 4 ) - Roast Beef\n" +
                     "( 5 ) - Chicken\n");
 
@@ -93,6 +97,8 @@ public class Toppings {
                 case 0:
                     System.out.println("All meat has been added.");
                     break loop;
+                case 99:
+                    order();
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
             }
@@ -111,7 +117,8 @@ public class Toppings {
                     "( 2 ) - Provolone\n" +
                     "( 3 ) - Cheddar\n" +
                     "( 4 ) - Swiss\n" +
-                    "( 0 ) - Done with Toppings\n");
+                    "( 0 ) - Done with Toppings\n" +
+                    "( 99 )- Exit\n");
 
             switch (c){
                 case 1:
@@ -129,6 +136,8 @@ public class Toppings {
                 case 0:
                     System.out.println("All cheese has been added.");
                     break loop;
+                case 99:
+                    order();
                 default:
                     System.out.println("That was not a proper cheese choice. Enter again :)");
             }
@@ -144,7 +153,7 @@ public class Toppings {
                     "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
                     "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
                     "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
-                    "( 5 ) - Thousand Islands\n");
+                    "( 5 ) - Thousand Islands   ( 99 )- Exit\n");
 
             switch (topping) {
                 case 1:
@@ -174,6 +183,8 @@ public class Toppings {
                 case 0:
                     System.out.println("\nAll sauces have been added.");
                     break loop;
+                case 99:
+                    order();
                 default:
                     System.out.println("\nThat was not a proper choice. Enter again :)");
             }
