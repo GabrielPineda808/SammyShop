@@ -13,7 +13,7 @@ public class Sandwich {
     ArrayList<String> premiumTopping = new ArrayList<>();
     ArrayList<String> cheese = new ArrayList<>();
 
-    public Sandwich(int size ,String bread) {
+    public Sandwich(String bread,int size ) {
         this.bread = bread;
         this.size = size;
     }
