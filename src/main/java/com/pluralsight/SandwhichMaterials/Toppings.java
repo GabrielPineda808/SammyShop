@@ -1,15 +1,16 @@
 package com.pluralsight.SandwhichMaterials;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
 
 public class Toppings {
-    static ArrayList<String> regularToppings = new ArrayList<>();
-    static ArrayList<String> premiumToppings = new ArrayList<>();
-    static ArrayList<String> cheeses = new ArrayList<>();
+    static List<String> regularToppings = new ArrayList<>();
+    static List<String> premiumToppings = new ArrayList<>();
+    static List<String> cheeses = new ArrayList<>();
 
-    public static ArrayList<String> regularToppings(){
+    public static List<String> regularToppings(){
         System.out.println("\nPlease select your toppings below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What toppings would you like on your sandwich? \n" +
@@ -19,33 +20,34 @@ public class Toppings {
                     "( 4 ) - Tomatoes     ( 9 ) - Mushrooms\n" +
                     "( 5 ) - Jalapenos    ( 0 ) - Done with Toppings\n");
 
+
             switch (topping) {
                 case 1:
-                    regularToppings.add("Lettuce");
+                    checkTopping(regularToppings,"Lettuce");
                     break;
                 case 2:
-                    regularToppings.add("Peppers");
+                    checkTopping(regularToppings,"Peppers ");
                     break;
                 case 3:
-                    regularToppings.add("Onions");
+                    checkTopping(regularToppings,"Onions");
                     break;
                 case 4:
-                    regularToppings.add("Tomatoes");
+                    checkTopping(regularToppings,"Tomatoes");
                     break;
                 case 5:
-                    regularToppings.add("Jalapenos");
+                    checkTopping(regularToppings,"Jalapenos");
                     break;
                 case 6:
-                    regularToppings.add("Cucumbers");
+                    checkTopping(regularToppings,"Cucumbers");
                     break;
                 case 7:
-                    regularToppings.add("Pickles");
+                    checkTopping(regularToppings,"Pickles");
                     break;
                 case 8:
-                    regularToppings.add("Guacamole");
+                    checkTopping(regularToppings,"Guacamole");
                     break;
                 case 9:
-                    regularToppings.add("Mushrooms");
+                    checkTopping(regularToppings,"Mushrooms");
                     break;
                 case 0:
                     System.out.println("All toppings have been added.");
@@ -57,7 +59,7 @@ public class Toppings {
         return regularToppings;
     }
 
-    public static ArrayList<String> premiumToppings(){
+    public static List<String> premiumToppings(){
         System.out.println("\nPlease select your meats below. They do come at an additional cost.\n" +
                 "Pricing - 4 inch( $1.00 / $0.50 per extra ) - 8 inch( $2.00 / $1.00 per extra )- 8 inch( $3.00 / $1.50 per extra )\n");
 
@@ -71,22 +73,22 @@ public class Toppings {
 
             switch (topping){
                 case 1:
-                    premiumToppings.add("Steak");
+                    checkTopping(premiumToppings,"Steak");
                     break;
                 case 2:
-                    premiumToppings.add("Ham");
+                    checkTopping(premiumToppings,"Ham");
                     break;
                 case 3:
-                    premiumToppings.add("Salami");
+                    checkTopping(premiumToppings,"Salami");
                     break;
                 case 4:
-                    premiumToppings.add("Roast Beef");
+                    checkTopping(premiumToppings,"Roast Beef");
                     break;
                 case 5:
-                    premiumToppings.add("Chicken");
+                    checkTopping(premiumToppings,"Chicken");
                     break;
                 case 6:
-                    premiumToppings.add("Bacon");
+                    checkTopping(premiumToppings,"Bacon");
                     break;
                 case 0:
                     System.out.println("All meat has been added.");
@@ -99,7 +101,7 @@ public class Toppings {
         return premiumToppings;
     }
 
-    public static ArrayList<String> cheese(){
+    public static List<String> cheese(){
         System.out.println("\nPlease select your cheese below. Cheese comes at an additional cost.\n" +
                 "Pricing - 4 inch( $0.75 / $0.30 per extra ) - 8 inch( $1.50 / $0.60 per extra )- 8 inch( $2.25 / $0.90 per extra )\n");
 
@@ -113,16 +115,16 @@ public class Toppings {
 
             switch (c){
                 case 1:
-                    cheeses.add("American");
+                    checkTopping(cheeses,"American");
                     break;
                 case 2:
-                    cheeses.add("Provolone");
+                    checkTopping(cheeses,"Provolone");
                     break;
                 case 3:
-                    cheeses.add("Cheddar");
+                    checkTopping(cheeses,"Cheddar");
                     break;
                 case 4:
-                    cheeses.add("Swiss");
+                    checkTopping(cheeses,"Swiss");
                     break;
                 case 0:
                     System.out.println("All cheese has been added.");
@@ -134,7 +136,7 @@ public class Toppings {
         return cheeses;
     }
 
-    public static ArrayList<String> sauces(){
+    public static List<String> sauces(){
         System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What sauce or side would you like on your sandwich? \n" +
@@ -146,28 +148,28 @@ public class Toppings {
 
             switch (topping) {
                 case 1:
-                    regularToppings.add("Mayo");
+                    checkTopping(regularToppings,"Mayo");
                     break;
                 case 2:
-                    regularToppings.add("Mustard");
+                    checkTopping(regularToppings,"Mustard");
                     break;
                 case 3:
-                    regularToppings.add("Ketchup");
+                    checkTopping(regularToppings,"Ketchup");
                     break;
                 case 4:
-                    regularToppings.add("Ranch");
+                    checkTopping(regularToppings,"Ranch");
                     break;
                 case 5:
-                    regularToppings.add("Thousand Islands");
+                    checkTopping(regularToppings,"Thousand Islands");
                     break;
                 case 6:
-                    regularToppings.add("Vinaigrette");
+                    checkTopping(regularToppings,"Vinaigrette");
                     break;
                 case 7:
-                    regularToppings.add("Au jus");
+                    checkTopping(regularToppings,"Side of Au jus");
                     break;
                 case 8:
-                    regularToppings.add("Sauce");
+                    checkTopping(regularToppings,"Side of Sauce");
                     break;
                 case 0:
                     System.out.println("\nAll sauces have been added.");
@@ -177,5 +179,13 @@ public class Toppings {
             }
         }
         return regularToppings;
+    }
+
+    public static void checkTopping (List<String> list, String topping){
+        if(list.contains(topping)){
+            list.set(list.indexOf(topping), topping + " (Extra)" );
+        }else {
+            list.add(topping);
+        }
     }
 }
