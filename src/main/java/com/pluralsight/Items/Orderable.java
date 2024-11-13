@@ -1,7 +1,4 @@
-package com.pluralsight;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.pluralsight.Items;
 
 public class Orderable {
 }

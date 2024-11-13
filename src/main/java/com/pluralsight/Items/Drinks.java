@@ -1,8 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Items;
 
-import java.util.ArrayList;
-
-public class Drinks extends Orderable{
+public class Drinks extends Orderable {
     private double price;
     private String size;
     private String name;
@@ -46,5 +44,14 @@ public class Drinks extends Orderable{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Drinks{" +
+                "price=" + price +
+                ", size='" + size + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

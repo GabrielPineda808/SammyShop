@@ -1,10 +1,10 @@
-package com.pluralsight;
+package com.pluralsight.Items;
 
 import java.util.ArrayList;
 
 import static com.pluralsight.GlobalMethods.ans;
 
-public class Sandwich extends Orderable{
+public class Sandwich extends Orderable {
     private String bread;
     private boolean isToasted = false;
     private int size;
@@ -106,5 +106,18 @@ public class Sandwich extends Orderable{
 
     public void display(){
 
+    }
+
+    @Override
+    public String toString() {
+        return "Sandwich{" +
+                "bread='" + bread + '\'' +
+                ", isToasted=" + isToasted +
+                ", size=" + size +
+                ", price=" + getPrice() +
+                ", regularTopping=" + regularTopping +
+                ", premiumTopping=" + premiumTopping +
+                ", cheese=" + cheese +
+                '}';
     }
 }

@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-import static com.pluralsight.HomeScreen.home;
+import static com.pluralsight.Screens.HomeScreen.home;
 
 /**
  * Hello world!

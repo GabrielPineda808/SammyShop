@@ -1,6 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Items;
 
-public class Chips extends Orderable{
+public class Chips extends Orderable {
     private String name;
     private double price = 1.50;
 
@@ -22,5 +22,13 @@ public class Chips extends Orderable{
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
