@@ -24,6 +24,10 @@ public class Chips extends Orderable {
         this.price = price;
     }
 
+    public void display(){
+        System.out.printf(name + "     ----%.2f----\n",price);
+    }
+
     @Override
     public String toString() {
         return "Chips{" +

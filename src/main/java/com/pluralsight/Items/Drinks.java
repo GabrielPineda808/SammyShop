@@ -46,6 +46,10 @@ public class Drinks extends Orderable {
         this.name = name;
     }
 
+    public void display(){
+        System.out.printf(size + " " + name + "    ----%.2f----\n", price);
+    }
+
     @Override
     public String toString() {
         return "Drinks{" +

@@ -1,6 +1,7 @@
 package com.pluralsight.Items;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
 
@@ -9,9 +10,9 @@ public class Sandwich extends Orderable {
     private boolean isToasted = false;
     private int size;
     private double price;
-    ArrayList<String> regularTopping = new ArrayList<>();
-    ArrayList<String> premiumTopping = new ArrayList<>();
-    ArrayList<String> cheese = new ArrayList<>();
+    List<String> regularTopping = new ArrayList<>();
+    List<String> premiumTopping = new ArrayList<>();
+    List<String> cheese = new ArrayList<>();
 
     public Sandwich(String bread,int size ) {
         this.bread = bread;
@@ -80,15 +81,15 @@ public class Sandwich extends Orderable {
         return price;
     }
 
-    public void addRegularToppings(ArrayList<String> toppings){
+    public void addRegularToppings(List<String> toppings){
         regularTopping.addAll(toppings);
     }
 
-    public void addPremiumToppings(ArrayList<String> toppings){
+    public void addPremiumToppings(List<String> toppings){
         premiumTopping.addAll(toppings);
     }
 
-    public void addCheese(ArrayList<String> cheese){
+    public void addCheese(List<String> cheese){
         this.cheese.addAll(cheese);
     }
 
@@ -105,6 +106,19 @@ public class Sandwich extends Orderable {
     }
 
     public void display(){
+        System.out.printf(size + " inch Sandwich on " + bread + "   ----%.2f----\n", getPrice());
+        System.out.println("Meat: ");
+        for(String t : premiumTopping){
+            System.out.println("    -"+t);
+        }
+        System.out.println("\nCheese: ");
+        for(String c : cheese){
+            System.out.println("    -" + c);
+        }
+        System.out.println("\nToppings and Sauce:");
+        for (String t : regularTopping){
+            System.out.println("    -"+ t );
+        }
 
     }
 
