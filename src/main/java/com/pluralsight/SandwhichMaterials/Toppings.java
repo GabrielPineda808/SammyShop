@@ -56,6 +56,7 @@ public class Toppings {
                     break loop;
                 case 99:
                     order();
+                    break;
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
             }
@@ -99,6 +100,7 @@ public class Toppings {
                     break loop;
                 case 99:
                     order();
+                    break;
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
             }
@@ -138,6 +140,7 @@ public class Toppings {
                     break loop;
                 case 99:
                     order();
+                    break;
                 default:
                     System.out.println("That was not a proper cheese choice. Enter again :)");
             }
@@ -185,6 +188,7 @@ public class Toppings {
                     break loop;
                 case 99:
                     order();
+                    break;
                 default:
                     System.out.println("\nThat was not a proper choice. Enter again :)");
             }

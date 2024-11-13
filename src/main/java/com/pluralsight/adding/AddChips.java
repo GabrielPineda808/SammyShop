@@ -58,6 +58,7 @@ public class AddChips{
                 return "Sun Chips";
             case 99:
                 order();
+                break;
             default:
                 System.out.println("That was not a proper choice. Enter again :)\n");
                 chipsName();

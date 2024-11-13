@@ -50,6 +50,7 @@ public class AddDrinks{
                 return "Large";
             case 99 :
                 order();
+                break;
             default:
                 System.out.println("That was not a proper choice. Enter again :)\n");
                 drinkSize();
