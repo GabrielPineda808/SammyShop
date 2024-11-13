@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import static com.pluralsight.GlobalMethods.ans;
 
-public class Sandwich {
+public class Sandwich extends Orderable{
     private String bread;
     private boolean isToasted = false;
     private int size;

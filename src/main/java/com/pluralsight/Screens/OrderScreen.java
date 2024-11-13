@@ -1,8 +1,8 @@
 package com.pluralsight;
 
-import static com.pluralsight.AddChips.addChips;
-import static com.pluralsight.AddDrinks.addDrinks;
-import static com.pluralsight.AddSandwich.AddSammy;
+import static com.pluralsight.adding.AddChips.addChips;
+import static com.pluralsight.adding.AddDrinks.addDrinks;
+import static com.pluralsight.adding.AddSandwich.AddSammy;
 import static com.pluralsight.GlobalMethods.ans;
 
 public class OrderScreen {
