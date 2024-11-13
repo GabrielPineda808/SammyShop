@@ -1,10 +1,13 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
+
 import static com.pluralsight.Bread.bread;
 import static com.pluralsight.Size.size;
 import static com.pluralsight.Toppings.*;
 
 public class AddSandwich {
+    static ArrayList<Sandwich> sandwiches = new ArrayList<>();
     public static void AddSammy(){
         System.out.println("\nHey there! Lets go ahead and make that sandwich for you!\n");
 
@@ -17,5 +20,11 @@ public class AddSandwich {
         sandwich.addRegularToppings(sauces());
         sandwich.toast();
 
+        sandwiches.add(sandwich);
+
+    }
+
+    public static ArrayList<Sandwich> getSandwiches(){
+        return sandwiches;
     }
 }
