@@ -1,14 +1,17 @@
-package com.pluralsight;
+package com.pluralsight.adding;
+
+import com.pluralsight.Items.Orderable;
+import com.pluralsight.Items.Sandwich;
 
 import java.util.ArrayList;
 
-import static com.pluralsight.Bread.bread;
+import static com.pluralsight.SandwhichMaterials.Bread.bread;
 import static com.pluralsight.GlobalMethods.ans;
-import static com.pluralsight.OrderScreen.order;
-import static com.pluralsight.Size.size;
-import static com.pluralsight.Toppings.*;
+import static com.pluralsight.Screens.OrderScreen.order;
+import static com.pluralsight.SandwhichMaterials.Size.size;
+import static com.pluralsight.SandwhichMaterials.Toppings.*;
 
-public class AddSandwich extends Orderable{
+public class AddSandwich extends Orderable {
     static ArrayList<Sandwich> sandwiches = new ArrayList<>();
     public static void AddSammy(){
         System.out.println("\nHey there! Lets go ahead and make that sandwich for you!\n");
