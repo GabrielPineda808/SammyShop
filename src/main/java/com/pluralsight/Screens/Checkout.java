@@ -16,15 +16,15 @@ public class Checkout {
 
         for(Sandwich s: AddSandwich.getSandwiches()){
             total += s.getPrice();
-            System.out.println(s.toString());
+            s.display();
         }
         for (Drinks drink : AddDrinks.getDrinks()){
            total += drink.getPrice();
-            System.out.println(drink.toString());
+            drink.display();
         }
         for(Chips chip: AddChips.getChips()){
             total += chip.getPrice();
-            System.out.println(chip.toString());
+            chip.display();
         }
     }
 }
