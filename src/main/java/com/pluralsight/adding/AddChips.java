@@ -1,10 +1,13 @@
-package com.pluralsight;
+package com.pluralsight.adding;
+
+import com.pluralsight.Items.Chips;
+import com.pluralsight.Items.Sandwich;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
-import static com.pluralsight.OrderScreen.order;
+import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddChips{
     static List<Chips> chips = new ArrayList<>();
@@ -58,5 +61,9 @@ public class AddChips{
         }
 
         return "";
+    }
+
+    public static List<Chips> getChips(){
+        return chips;
     }
 }
