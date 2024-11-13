@@ -48,7 +48,7 @@ public class Toppings {
                     regularToppings.add("Mushrooms");
                     break;
                 case 0:
-                    System.out.println("All regular regularToppings have been added.");
+                    System.out.println("All toppings have been added.");
                     break loop;
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
@@ -58,11 +58,11 @@ public class Toppings {
     }
 
     public static ArrayList<String> premiumToppings(){
-        System.out.println("\nPlease select your premium toppings below. They do come at an additional cost.\n" +
+        System.out.println("\nPlease select your meats below. They do come at an additional cost.\n" +
                 "Pricing - 4 inch( $1.00 / $0.50 per extra ) - 8 inch( $2.00 / $1.00 per extra )- 8 inch( $3.00 / $1.50 per extra )\n");
 
         loop: while (true){
-            int topping = ans("What regularToppings would you like on your sandwich? \n" +
+            int topping = ans("What meat would you like on your sandwich? \n" +
                     "( 1 ) - Steak      ( 6 ) - Bacon\n" +
                     "( 2 ) - Ham        ( 0 ) - Done with Toppings\n" +
                     "( 3 ) - Salami\n" +
@@ -89,7 +89,7 @@ public class Toppings {
                     premiumToppings.add("Bacon");
                     break;
                 case 0:
-                    System.out.println("All premium toppings have been added.");
+                    System.out.println("All meat has been added.");
                     break loop;
                 default:
                     System.out.println("That was not a proper topping choice. Enter again :)");
@@ -104,7 +104,7 @@ public class Toppings {
                 "Pricing - 4 inch( $0.75 / $0.30 per extra ) - 8 inch( $1.50 / $0.60 per extra )- 8 inch( $2.25 / $0.90 per extra )\n");
 
         loop: while (true){
-            int c = ans("What regularToppings would you like on your sandwich? \n" +
+            int c = ans("What cheese would you like on your sandwich? \n" +
                     "( 1 ) - American\n" +
                     "( 2 ) - Provolone\n" +
                     "( 3 ) - Cheddar\n" +
@@ -173,7 +173,7 @@ public class Toppings {
                     System.out.println("\nAll sauces have been added.");
                     break loop;
                 default:
-                    System.out.println("\nThat was not a proper sauce choice. Enter again :)");
+                    System.out.println("\nThat was not a proper choice. Enter again :)");
             }
         }
         return regularToppings;
