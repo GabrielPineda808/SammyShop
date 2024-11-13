@@ -1,5 +1,6 @@
-package com.pluralsight;
+package com.pluralsight.Screens;
 
+import static com.pluralsight.Screens.Checkout.checkout;
 import static com.pluralsight.adding.AddChips.addChips;
 import static com.pluralsight.adding.AddDrinks.addDrinks;
 import static com.pluralsight.adding.AddSandwich.AddSammy;
@@ -26,8 +27,10 @@ public class OrderScreen {
                 addChips();
                 break;
             case 4:
+                checkout();
                 break;
             case 5:
+
                 break;
             default:
                 System.out.println("\nThat is not a proper choice please enter again.");
