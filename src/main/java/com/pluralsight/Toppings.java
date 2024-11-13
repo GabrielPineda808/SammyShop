@@ -133,4 +133,49 @@ public class Toppings {
         }
         return cheeses;
     }
+
+    public static ArrayList<String> sauces(){
+        System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
+        loop: while (true) {
+            int topping = ans("What sauce or side would you like on your sandwich? \n" +
+                    "( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
+                    "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
+                    "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
+                    "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
+                    "( 5 ) - Thousand Islands\n");
+
+            switch (topping) {
+                case 1:
+                    regularToppings.add("Mayo");
+                    break;
+                case 2:
+                    regularToppings.add("Mustard");
+                    break;
+                case 3:
+                    regularToppings.add("Ketchup");
+                    break;
+                case 4:
+                    regularToppings.add("Ranch");
+                    break;
+                case 5:
+                    regularToppings.add("Thousand Islands");
+                    break;
+                case 6:
+                    regularToppings.add("Vinaigrette");
+                    break;
+                case 7:
+                    regularToppings.add("Au jus");
+                    break;
+                case 8:
+                    regularToppings.add("Sauce");
+                    break;
+                case 0:
+                    System.out.println("\nAll sauces have been added.");
+                    break loop;
+                default:
+                    System.out.println("\nThat was not a proper sauce choice. Enter again :)");
+            }
+        }
+        return regularToppings;
+    }
 }
