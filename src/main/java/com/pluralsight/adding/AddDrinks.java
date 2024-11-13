@@ -10,7 +10,7 @@ import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddDrinks{
-    static List<Drinks> drinks = new ArrayList<>();
+    public static List<Drinks> drinks = new ArrayList<>();
     public static void addDrinks(){
         System.out.println("\nHere we will add your drinks :)\n");
         Drinks drink = new Drinks(drinkSize(),drinkName());

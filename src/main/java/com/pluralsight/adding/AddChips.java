@@ -10,7 +10,7 @@ import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddChips{
-    static List<Chips> chips = new ArrayList<>();
+    public static List<Chips> chips = new ArrayList<>();
     public static void addChips(){
         System.out.println("\nHere we will add your chips :) \n");
 
