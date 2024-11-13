@@ -3,17 +3,28 @@ package com.pluralsight;
 import java.util.ArrayList;
 
 public class Drinks extends Orderable{
-    private int price;
+    private double price;
     private String size;
     private String name;
 
-    public Drinks(int price, String size, String name) {
-        this.price = price;
+    public Drinks(String size, String name) {
         this.size = size;
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
+        switch (size){
+            case "Small":
+                price += 2.00;
+                break;
+            case "Medium":
+                price+= 2.50;
+                break;
+            default:
+                price+= 3.00;
+                break;
+        }
+
         return price;
     }
 
