@@ -1,6 +1,7 @@
 package com.pluralsight.Items;
 
 import java.util.ArrayList;
+import java.util.Formatter;
 import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
@@ -105,21 +106,25 @@ public class Sandwich extends Orderable {
         }
     }
 
-    public void display(){
-        System.out.printf(size + " inch Sandwich on " + bread + "   ----%.2f----\n", price);
-        if(!premiumTopping.isEmpty()){System.out.println("Meat: ");}
+    public String display(){
+        StringBuilder newStr = new StringBuilder();
+        Formatter formatter = new Formatter(newStr);
+        formatter.format(size + " inch Sandwich on " + bread + "   ----%.2f----\n",price);
+        if(!premiumTopping.isEmpty()){newStr.append("   Meat: \n");}
         for(String t : premiumTopping){
-            System.out.println("    -"+t);
+            newStr.append("    -"+t+"\n");
         }
-        if(!cheese.isEmpty()){System.out.println("\nCheese: ");}
+        if(!cheese.isEmpty()){newStr.append("Cheese: \n");}
         for(String c : cheese){
-            System.out.println("    -" + c);
+            newStr.append("    -" + c + "\n");
         }
-        if(!regularTopping.isEmpty()){System.out.println("\nToppings and Sauce:");}
+        if(!regularTopping.isEmpty()){newStr.append("Toppings and Sauce:\n");}
         for (String t : regularTopping){
-            System.out.println("    -"+ t );
+            newStr.append("    -"+ t +"\n");
         }
+        newStr.append("\n---------------------\n");
 
+        return newStr.toString();
     }
 
     @Override
