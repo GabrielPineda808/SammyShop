@@ -1,4 +1,4 @@
-# LedgeMaxxing
+# SammyShop
 
 SammyShop is a Java CLI Application that is meant to represent a POS system that allows our user to 
 create an order to which they can add sandwiches, drinks, and chips. It allows the user to fully customize and place
