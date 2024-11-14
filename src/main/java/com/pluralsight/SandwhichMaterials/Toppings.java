@@ -62,6 +62,51 @@ public class Toppings {
                     System.out.println("That was not a proper topping choice. Enter again :)");
             }
         }
+
+        System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
+        loop: while (true) {
+            int topping = ans("What sauce or side would you like on your sandwich? \n" +
+                    "\n( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
+                    "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
+                    "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
+                    "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
+                    "( 5 ) - Thousand Islands   ( 99 )- Exit\n");
+
+            switch (topping) {
+                case 1:
+                    checkTopping(regularToppings,"Mayo");
+                    break;
+                case 2:
+                    checkTopping(regularToppings,"Mustard");
+                    break;
+                case 3:
+                    checkTopping(regularToppings,"Ketchup");
+                    break;
+                case 4:
+                    checkTopping(regularToppings,"Ranch");
+                    break;
+                case 5:
+                    checkTopping(regularToppings,"Thousand Islands");
+                    break;
+                case 6:
+                    checkTopping(regularToppings,"Vinaigrette");
+                    break;
+                case 7:
+                    checkTopping(regularToppings,"Side of Au jus");
+                    break;
+                case 8:
+                    checkTopping(regularToppings,"Side of Sauce");
+                    break;
+                case 0:
+                    System.out.println("\nAll sauces have been added.");
+                    break loop;
+                case 99:
+                    order();
+                    break;
+                default:
+                    System.out.println("\nThat was not a proper choice. Enter again :)");
+            }
+        }
         return regularToppings;
     }
 
@@ -147,54 +192,6 @@ public class Toppings {
             }
         }
         return cheeses;
-    }
-
-    public static List<String> sauces() throws IOException {
-        System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
-        loop: while (true) {
-            int topping = ans("What sauce or side would you like on your sandwich? \n" +
-                    "\n( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
-                    "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
-                    "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
-                    "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
-                    "( 5 ) - Thousand Islands   ( 99 )- Exit\n");
-
-            switch (topping) {
-                case 1:
-                    checkTopping(regularToppings,"Mayo");
-                    break;
-                case 2:
-                    checkTopping(regularToppings,"Mustard");
-                    break;
-                case 3:
-                    checkTopping(regularToppings,"Ketchup");
-                    break;
-                case 4:
-                    checkTopping(regularToppings,"Ranch");
-                    break;
-                case 5:
-                    checkTopping(regularToppings,"Thousand Islands");
-                    break;
-                case 6:
-                    checkTopping(regularToppings,"Vinaigrette");
-                    break;
-                case 7:
-                    checkTopping(regularToppings,"Side of Au jus");
-                    break;
-                case 8:
-                    checkTopping(regularToppings,"Side of Sauce");
-                    break;
-                case 0:
-                    System.out.println("\nAll sauces have been added.");
-                    break loop;
-                case 99:
-                    order();
-                    break;
-                default:
-                    System.out.println("\nThat was not a proper choice. Enter again :)");
-            }
-        }
-        return regularToppings;
     }
 
     public static void checkTopping (List<String> list, String topping){
