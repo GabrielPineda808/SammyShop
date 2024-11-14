@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.io.IOException;
+
 import static com.pluralsight.Screens.HomeScreen.home;
 
 /**
@@ -8,8 +10,7 @@ import static com.pluralsight.Screens.HomeScreen.home;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) throws IOException {
 
         home();
     }
