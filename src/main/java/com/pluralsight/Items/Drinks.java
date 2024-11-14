@@ -1,5 +1,7 @@
 package com.pluralsight.Items;
 
+import java.util.Formatter;
+
 public class Drinks extends Orderable {
     private double price;
     private String size;
@@ -46,8 +48,11 @@ public class Drinks extends Orderable {
         this.name = name;
     }
 
-    public void display(){
-        System.out.printf(size + " " + name + "    ----%.2f----\n", price);
+    public String display(){
+        StringBuilder newStr = new StringBuilder();
+        Formatter formatter = new Formatter(newStr);
+        formatter.format(size + " " + name + "    ----%.2f----\n", price);
+        newStr.append("\n---------------------\n");
     }
 
     @Override
