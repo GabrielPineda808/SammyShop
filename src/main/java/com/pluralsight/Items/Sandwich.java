@@ -110,6 +110,9 @@ public class Sandwich extends Orderable {
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);
         formatter.format(size + " inch Sandwich on " + bread + "   ----%.2f----\n",price);
+        if(isToasted){
+            newStr.append("\n      Toasted\n");
+        }
         if(!premiumTopping.isEmpty()){newStr.append("   Meat: \n");}
         for(String t : premiumTopping){
             newStr.append("    -"+t+"\n");
@@ -122,6 +125,7 @@ public class Sandwich extends Orderable {
         for (String t : regularTopping){
             newStr.append("    -"+ t +"\n");
         }
+
         newStr.append("\n---------------------\n");
 
         return newStr.toString();

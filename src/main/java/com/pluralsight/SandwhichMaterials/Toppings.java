@@ -20,7 +20,7 @@ public class Toppings {
                     "( 2 ) - Peppers      ( 7 ) - Pickles\n" +
                     "( 3 ) - Onions       ( 8 ) - Guacamole\n" +
                     "( 4 ) - Tomatoes     ( 9 ) - Mushrooms\n" +
-                    "( 5 ) - Jalapenos    ( 0 ) - Done with Toppings\n" +
+                    "( 5 ) - Jalapenos    ( 0 ) - DONE WITH TOPPINGS\n" +
                     "( 99 ) - Exit\n");
 
 
@@ -53,13 +53,13 @@ public class Toppings {
                     checkTopping(regularToppings,"Mushrooms");
                     break;
                 case 0:
-                    System.out.println("All toppings have been added.");
+                    System.out.println("All toppings have been added.\n");
                     break loop;
                 case 99:
                     order();
                     break loop;
                 default:
-                    System.out.println("That was not a proper topping choice. Enter again :)");
+                    System.out.println("That was not a proper topping choice. Enter again :)\n");
             }
         }
 
@@ -69,7 +69,7 @@ public class Toppings {
                     "\n( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
                     "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
                     "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
-                    "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
+                    "( 4 ) - Ranch              ( 0 ) - DONE WITH SAUCE\n" +
                     "( 5 ) - Thousand Islands   ( 99 )- Exit\n");
 
             switch (topping) {
@@ -117,7 +117,7 @@ public class Toppings {
         loop: while (true){
             int topping = ans("What meat would you like on your sandwich? \n" +
                     "\n( 1 ) - Steak      ( 6 ) - Bacon\n" +
-                    "( 2 ) - Ham        ( 0 ) - Done with Toppings\n" +
+                    "( 2 ) - Ham        ( 0 ) - DONE WITH MEAT\n" +
                     "( 3 ) - Salami     ( 99 )- Exit\n" +
                     "( 4 ) - Roast Beef\n" +
                     "( 5 ) - Chicken\n");
@@ -148,7 +148,7 @@ public class Toppings {
                     order();
                     break loop;
                 default:
-                    System.out.println("\nThat was not a proper topping choice. Enter again :)\n");
+                    System.out.println("\nThat was not a proper meat choice. Enter again :)\n");
             }
         }
 
@@ -165,7 +165,7 @@ public class Toppings {
                     "( 2 ) - Provolone\n" +
                     "( 3 ) - Cheddar\n" +
                     "( 4 ) - Swiss\n" +
-                    "( 0 ) - Done with Toppings\n" +
+                    "( 0 ) - DONE WITH CHEESE\n" +
                     "( 99 )- Exit\n");
 
             switch (c){

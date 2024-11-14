@@ -11,13 +11,12 @@ public class OrderScreen {
     public static void order() throws IOException {
 
         loop : while (true) {
-            System.out.println("\nHow may we help you today? Please select an option below :)\n" +
+            int orderChoice = ans("\nHow may we help you today? Please select an option below :)\n" +
                     "\n( 1 ) - Add Sandwich\n" +
                     "( 2 ) - Add Drink\n" +
                     "( 3 ) - Add Chips\n" +
                     "( 4 ) - Checkout\n" +
                     "( 5 ) - Cancel Order\n");
-            int orderChoice = ans("Enter here: \n");
             switch (orderChoice) {
                 case 1:
                     AddSammy();

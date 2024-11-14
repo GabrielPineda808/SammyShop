@@ -1,0 +1,23 @@
+Receipt for order on 2024-11-14T06:36:38.5451729004 inch Sandwich on White   ----16.10----
+   Meat: 
+    -Steak (Extra)
+    -Ham
+Cheese: 
+    -American (Extra)
+    -Provolone
+Toppings and Sauce:
+    -Lettuce (Extra)
+    -Peppers 
+    -Onions
+    -Mayo (Extra)
+    -Mustard
+    Toasted
+
+---------------------
+Small Coke    ----4.00----
+
+---------------------
+Hot Cheetos     ----1.50----
+
+---------------------
+Total: $ 33.15

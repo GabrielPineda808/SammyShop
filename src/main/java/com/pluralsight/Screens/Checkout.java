@@ -13,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Formatter;
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.Screens.HomeScreen.home;
 import static com.pluralsight.Screens.OrderScreen.order;
 import static com.pluralsight.Screens.Cancel.Cancel;
 import static com.pluralsight.adding.AddChips.chips;
@@ -22,7 +23,7 @@ import static com.pluralsight.adding.AddSandwich.sandwiches;
 public class Checkout {
     static double total;
     public static void checkout() throws IOException {
-
+        total = 0;
         System.out.println("\nLets make sure everything is right before we checkout :)\n" +
                 "\n Please read over your order and order cost before you proceed with checkout.\n");
 
@@ -54,6 +55,7 @@ public class Checkout {
 
             switch (out) {
                 case 1:
+                    System.out.println("\n THANK YOU!\n");
                     Receipt();
                     break loop;
                 case 2:
@@ -74,7 +76,7 @@ public class Checkout {
         FileWriter fw = new FileWriter(file);
         BufferedWriter bw = new BufferedWriter(fw);
         Formatter formatter = new Formatter();
-        bw.write("Receipt for order on " + now);
+        bw.write("Receipt for order on " + now +"\n");
         for(Sandwich s: sandwiches){
             bw.write(s.display());
         }
@@ -86,5 +88,9 @@ public class Checkout {
         }
         bw.write(String.valueOf(formatter.format("Total: $ %.2f\n" ,total)));
         bw.close();
+        sandwiches.clear();
+        drinks.clear();
+        chips.clear();
+        home();
     }
 }

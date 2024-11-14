@@ -7,9 +7,10 @@ import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Size {
     public static int size() throws IOException {
-        System.out.println("\n What size would you like your sandwich to be? Please enter an option below. \n");
         loop: while (true) {
-            int size = ans("\n( 1 ) - 4 inch  ($5.50)\n" +
+            int size = ans(
+                    "\n What size would you like your sandwich to be? Please enter an option below."+
+                    "\n( 1 ) - 4 inch  ($5.50)\n" +
                     "( 2 ) - 8 inch ($7.00)\n" +
                     "( 3 ) - 12 inch  ($8.50)\n" +
                     "( 99 )- Exit\n");
