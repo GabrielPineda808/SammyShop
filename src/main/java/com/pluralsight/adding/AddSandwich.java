@@ -3,6 +3,7 @@ package com.pluralsight.adding;
 import com.pluralsight.Items.Orderable;
 import com.pluralsight.Items.Sandwich;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.pluralsight.SandwhichMaterials.Bread.bread;
@@ -13,7 +14,7 @@ import static com.pluralsight.SandwhichMaterials.Toppings.*;
 
 public class AddSandwich extends Orderable {
     public static ArrayList<Sandwich> sandwiches = new ArrayList<>();
-    public static void AddSammy(){
+    public static void AddSammy() throws IOException {
         System.out.println("\nHey there! Lets go ahead and make that sandwich for you!\n");
 
         Sandwich sandwich = new Sandwich(bread(),size());

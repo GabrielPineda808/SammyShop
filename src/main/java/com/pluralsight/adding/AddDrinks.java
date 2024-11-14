@@ -3,6 +3,7 @@ package com.pluralsight.adding;
 import com.pluralsight.Items.Drinks;
 import com.pluralsight.Items.Sandwich;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddDrinks{
     public static List<Drinks> drinks = new ArrayList<>();
-    public static void addDrinks(){
+    public static void addDrinks() throws IOException {
         System.out.println("\nHere we will add your drinks :)\n");
         Drinks drink = new Drinks(drinkSize(),drinkName());
 
@@ -35,7 +36,7 @@ public class AddDrinks{
         }
     }
 
-    public static String drinkSize(){
+    public static String drinkSize() throws IOException {
         int drinkSize = ans("Select a drink size below \n" +
                 "\n( 1 ) - Small ( $2.00 )\n" +
                 "( 2 ) - Medium ( $ 2.50 )\n" +
@@ -57,7 +58,7 @@ public class AddDrinks{
         }
         return "";
     }
-    public static String drinkName(){
+    public static String drinkName() throws IOException {
         int drinkSize = ans("Select a drink below \n" +
                 "\n( 1 ) - Coke           ( 5 ) - Coffee\n" +
                 "( 2 ) - Sprite         ( 6 ) - Tea\n" +

@@ -3,6 +3,7 @@ package com.pluralsight.adding;
 import com.pluralsight.Items.Chips;
 import com.pluralsight.Items.Sandwich;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddChips{
     public static List<Chips> chips = new ArrayList<>();
-    public static void addChips(){
+    public static void addChips() throws IOException {
         System.out.println("\nHere we will add your chips :) \n");
 
         Chips chip = new Chips(chipsName());
@@ -37,7 +38,7 @@ public class AddChips{
         }
     }
 
-    public static String chipsName(){
+    public static String chipsName() throws IOException {
         int chipsName = ans("Select chips below: \n" +
                 "\n( 1 ) - Hot Cheetos        ( 4 ) - Fritos\n" +
                 "( 2 ) - Doritos            ( 5 ) - Lays\n" +
