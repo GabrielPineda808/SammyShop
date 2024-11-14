@@ -1,5 +1,6 @@
 package com.pluralsight.SandwhichMaterials;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class Toppings {
     static List<String> premiumToppings = new ArrayList<>();
     static List<String> cheeses = new ArrayList<>();
 
-    public static List<String> regularToppings(){
+    public static List<String> regularToppings() throws IOException {
         System.out.println("\nPlease select your toppings below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What toppings would you like on your sandwich? \n" +
@@ -64,7 +65,7 @@ public class Toppings {
         return regularToppings;
     }
 
-    public static List<String> premiumToppings(){
+    public static List<String> premiumToppings() throws IOException {
         System.out.println("\nPlease select your meats below. They do come at an additional cost.\n" +
                 "Pricing - 4 inch( $1.00 / $0.50 per extra ) - 8 inch( $2.00 / $1.00 per extra )- 8 inch( $3.00 / $1.50 per extra )\n");
 
@@ -109,7 +110,7 @@ public class Toppings {
         return premiumToppings;
     }
 
-    public static List<String> cheese(){
+    public static List<String> cheese() throws IOException {
         System.out.println("\nPlease select your cheese below. Cheese comes at an additional cost.\n" +
                 "Pricing - 4 inch( $0.75 / $0.30 per extra ) - 8 inch( $1.50 / $0.60 per extra )- 8 inch( $2.25 / $0.90 per extra )\n");
 
@@ -148,7 +149,7 @@ public class Toppings {
         return cheeses;
     }
 
-    public static List<String> sauces(){
+    public static List<String> sauces() throws IOException {
         System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What sauce or side would you like on your sandwich? \n" +
@@ -197,10 +198,10 @@ public class Toppings {
     }
 
     public static void checkTopping (List<String> list, String topping){
-        if(list.contains(topping)){
-            list.set(list.indexOf(topping), topping + " (Extra)" );
-        }else {
+        if(!list.contains(topping)){
             list.add(topping);
+        }else {
+            list.set(list.indexOf(topping), topping + " (Extra)" );
         }
     }
 }

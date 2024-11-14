@@ -1,10 +1,12 @@
 package com.pluralsight.SandwhichMaterials;
 
+import java.io.IOException;
+
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Bread {
-    public static String bread(){
+    public static String bread() throws IOException {
         int breadChoice = ans("What bread would you like today? Please enter below.\n" +
                 "( 1 ) - White\n" +
                 "( 2 ) - Wheat\n" +

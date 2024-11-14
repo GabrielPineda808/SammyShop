@@ -1,10 +1,12 @@
 package com.pluralsight.SandwhichMaterials;
 
+import java.io.IOException;
+
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Size {
-    public static int size(){
+    public static int size() throws IOException {
         System.out.println("\n What size would you like your sandwich to be? Please enter an option below. \n");
 
         int size = ans("( 1 ) - 4 inch  ($5.50)\n" +
