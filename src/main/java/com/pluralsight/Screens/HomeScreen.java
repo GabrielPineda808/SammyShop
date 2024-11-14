@@ -1,12 +1,14 @@
 package com.pluralsight.Screens;
 
 
+import java.io.IOException;
+
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 import static java.lang.System.exit;
 
 public class HomeScreen {
-    public static void home(){
+    public static void home() throws IOException {
         System.out.println("Welcome to our SammyShop\n");
 
         int option = ans(

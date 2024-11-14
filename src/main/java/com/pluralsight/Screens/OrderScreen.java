@@ -1,5 +1,9 @@
 package com.pluralsight.Screens;
 
+import com.pluralsight.adding.AddDrinks;
+
+import java.io.IOException;
+
 import static com.pluralsight.Screens.Checkout.checkout;
 import static com.pluralsight.adding.AddChips.addChips;
 import static com.pluralsight.adding.AddDrinks.addDrinks;
@@ -7,7 +11,7 @@ import static com.pluralsight.adding.AddSandwich.AddSammy;
 import static com.pluralsight.GlobalMethods.ans;
 
 public class OrderScreen {
-    public static void order(){
+    public static void order() throws IOException {
 
         System.out.println("\nHow may we help you today? Please select an option below :)\n" +
                 "\n( 1 ) - Add Sandwich\n" +
@@ -30,6 +34,7 @@ public class OrderScreen {
                 checkout();
                 break;
             case 5:
+
 
                 break;
             default:
