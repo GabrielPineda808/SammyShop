@@ -1,5 +1,7 @@
 package com.pluralsight.Items;
 
+import java.util.Formatter;
+
 public class Chips extends Orderable {
     private String name;
     private double price = 1.50;
@@ -24,8 +26,12 @@ public class Chips extends Orderable {
         this.price = price;
     }
 
-    public void display(){
-        System.out.printf(name + "     ----%.2f----\n",price);
+    public String display(){
+        StringBuilder newStr = new StringBuilder();
+        Formatter formatter = new Formatter(newStr);
+        formatter.format(name + "     ----%.2f----\n",price);
+        newStr.append("\n---------------------\n");
+        return newStr.toString();
     }
 
     @Override
