@@ -29,7 +29,7 @@ public class Chips extends Orderable {
     public String display(){
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);
-        formatter.format(name + "     ----%.2f----\n",price);
+        formatter.format("%-30s ----%.2f----\n",name,price);
         newStr.append("\n---------------------\n");
         return newStr.toString();
     }

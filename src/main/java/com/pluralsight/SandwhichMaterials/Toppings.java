@@ -8,9 +8,9 @@ import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Toppings {
-    static List<String> regularToppings = new ArrayList<>();
-    static List<String> premiumToppings = new ArrayList<>();
-    static List<String> cheeses = new ArrayList<>();
+    public static List<String> regularToppings = new ArrayList<>();
+    public static List<String> premiumToppings = new ArrayList<>();
+    public static List<String> cheeses = new ArrayList<>();
 
     public static List<String> regularToppings() throws IOException {
         System.out.println("\nPlease select your toppings below. They are free with your order!\n");

@@ -15,13 +15,13 @@ public class Drinks extends Orderable {
     public double getPrice() {
         switch (size){
             case "Small":
-                price += 2.00;
+                price = 2.00;
                 break;
             case "Medium":
-                price+= 2.50;
+                price= 2.50;
                 break;
             default:
-                price+= 3.00;
+                price= 3.00;
                 break;
         }
 
@@ -51,7 +51,7 @@ public class Drinks extends Orderable {
     public String display(){
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);
-        formatter.format(size + " " + name + "    ----%.2f----\n", price);
+        formatter.format("%-30s ----%.2f----\n", size + " " + name ,price);
         newStr.append("\n---------------------\n");
         return newStr.toString();
     }

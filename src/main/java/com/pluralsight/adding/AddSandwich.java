@@ -2,6 +2,7 @@ package com.pluralsight.adding;
 
 import com.pluralsight.Items.Orderable;
 import com.pluralsight.Items.Sandwich;
+import com.pluralsight.SandwhichMaterials.Toppings;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +17,6 @@ public class AddSandwich extends Orderable {
     public static ArrayList<Sandwich> sandwiches = new ArrayList<>();
     public static void AddSammy() throws IOException {
         System.out.println("\nHey there! Lets go ahead and make that sandwich for you!\n");
-
         Sandwich sandwich = new Sandwich(bread(),size());
 
 
@@ -34,6 +34,9 @@ public class AddSandwich extends Orderable {
             switch (choice){
                 case 1:
                     System.out.println("Time to make another sandwich :) \n");
+                    regularToppings.clear();
+                    premiumToppings.clear();
+                    cheeses.clear();
                     AddSammy();
                     break loop;
                 case 2:

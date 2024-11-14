@@ -52,7 +52,7 @@ public class Sandwich extends Orderable {
     public double getPrice() {
         switch (this.size){
             case 4:
-                this.price+= 5.50;
+                this.price= 5.50;
                 if(!premiumTopping.isEmpty()){
                     this.price +=1.00 + ((premiumTopping.size() -1) * 0.50);
                 }
@@ -61,7 +61,7 @@ public class Sandwich extends Orderable {
                 }
                 break;
             case 8:
-                this.price+= 7.00;
+                this.price= 7.00;
                 if(!premiumTopping.isEmpty()){
                     this.price +=2.00+ ((premiumTopping.size())-1 * 1.00);
                 }
@@ -70,13 +70,14 @@ public class Sandwich extends Orderable {
                 }
                 break;
             case 12:
+                this.price= 8.50;
                 if(!premiumTopping.isEmpty()){
                     this.price +=3.00+ ((premiumTopping.size()) -1 * 1.50);
                 }
                 if(!cheese.isEmpty()){
                     this.price += 2.25 + ((cheese.size() -1) * 0.90);
                 }
-                this.price+= 8.50;
+
                 break;
         }
         return price;
@@ -109,19 +110,19 @@ public class Sandwich extends Orderable {
     public String display(){
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);
-        formatter.format(size + " inch Sandwich on " + bread + "   ----%.2f----\n",price);
+        formatter.format("%-30s ----%.2f----\n",size + " inch Sandwich on " + bread ,price);
         if(isToasted){
-            newStr.append("\n      Toasted\n");
+            newStr.append("   Toasted\n");
         }
         if(!premiumTopping.isEmpty()){newStr.append("   Meat: \n");}
         for(String t : premiumTopping){
             newStr.append("    -"+t+"\n");
         }
-        if(!cheese.isEmpty()){newStr.append("Cheese: \n");}
+        if(!cheese.isEmpty()){newStr.append("   Cheese: \n");}
         for(String c : cheese){
             newStr.append("    -" + c + "\n");
         }
-        if(!regularTopping.isEmpty()){newStr.append("Toppings and Sauce:\n");}
+        if(!regularTopping.isEmpty()){newStr.append("   Toppings and Sauce:\n");}
         for (String t : regularTopping){
             newStr.append("    -"+ t +"\n");
         }

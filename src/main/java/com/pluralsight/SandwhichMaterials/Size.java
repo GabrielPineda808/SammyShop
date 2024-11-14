@@ -9,7 +9,7 @@ public class Size {
     public static int size() throws IOException {
         loop: while (true) {
             int size = ans(
-                    "\n What size would you like your sandwich to be? Please enter an option below."+
+                    "\nWhat size would you like your sandwich to be? Please enter an option below. \n"+
                     "\n( 1 ) - 4 inch  ($5.50)\n" +
                     "( 2 ) - 8 inch ($7.00)\n" +
                     "( 3 ) - 12 inch  ($8.50)\n" +

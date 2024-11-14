@@ -1,0 +1,34 @@
+Receipt for order on 2024-11-14T07:31:58.297754500
+4 inch Sandwich on White   ----8.05----
+   Toasted
+   Meat: 
+    -Steak
+    -Bacon
+   Cheese: 
+    -American
+    -Provolone
+   Toppings and Sauce:
+    -Lettuce
+    -Peppers 
+    -Onions
+    -Ranch
+    -Mayo
+
+---------------------
+12 inch Sandwich on Wheat   ----14.25----
+   Meat: 
+    -Chicken
+    -Bacon
+   Cheese: 
+    -Swiss (Extra)
+   Toppings and Sauce:
+    -Ranch (Extra)
+
+---------------------
+Small Coke    ----2.00----
+
+---------------------
+Small Sprite    ----2.00----
+
+---------------------
+Total: $ 26.30
