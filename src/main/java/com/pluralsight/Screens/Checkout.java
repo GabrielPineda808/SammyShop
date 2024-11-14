@@ -5,10 +5,14 @@ import com.pluralsight.Items.Drinks;
 import com.pluralsight.Items.Sandwich;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Formatter;
 
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
@@ -36,16 +40,16 @@ public class Checkout {
         }
         for (Drinks drink : drinks){
            total += drink.getPrice();
-            drink.display();
+            System.out.println(drink.display());
         }
         for(Chips chip: chips){
             total += chip.getPrice();
-            chip.display();
+            System.out.println(chip.display());
         }
         System.out.printf("Total: $ %.2f\n" ,total);
 
-        int out = ans("Checkout is almost complete! Please enter an option below\n" +
-                "( 1 ) - Complete Order and Checkout!\n" +
+        int out = ans("\nCheckout is almost complete! Please enter an option below\n" +
+                "\n( 1 ) - Complete Order and Checkout!\n" +
                 "( 2 ) - Order more!\n" +
                 "( 3 ) - Cancel order :(\n");
 
@@ -63,18 +67,24 @@ public class Checkout {
     }
 
     public static void Receipt() throws IOException {
-        FileWriter fw = new FileWriter(LocalDate.now() + "-"+ LocalTime.now() +".txt");
-        BufferedWriter bw = new BufferedWriter(fw);
 
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+        File file = new File("src\\main\\java\\com\\pluralsight\\Receipts", now.format(f) + ".txt" );
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+        Formatter formatter = new Formatter();
+        bw.write("Receipt for order on " + now);
         for(Sandwich s: sandwiches){
             bw.write(s.display());
         }
         for (Drinks drink : drinks){
-            drink.display();
+            bw.write(drink.display());
         }
         for(Chips chip: chips){
-            total += chip.getPrice();
-            chip.display();
+            bw.write(chip.display());
         }
+        bw.write(String.valueOf(formatter.format("Total: $ %.2f\n" ,total)));
+        bw.close();
     }
 }
