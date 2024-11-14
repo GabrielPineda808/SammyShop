@@ -46,21 +46,23 @@ public class Checkout {
         }
         System.out.printf("Total: $ %.2f\n" ,total);
 
-        int out = ans("\nCheckout is almost complete! Please enter an option below\n" +
-                "\n( 1 ) - Complete Order and Checkout!\n" +
-                "( 2 ) - Order more!\n" +
-                "( 3 ) - Cancel order :(\n");
+        loop : while (true) {
+            int out = ans("\nCheckout is almost complete! Please enter an option below\n" +
+                    "\n( 1 ) - Complete Order and Checkout!\n" +
+                    "( 2 ) - Order more!\n" +
+                    "( 3 ) - Cancel order :(\n");
 
-        switch (out){
-            case 1:
-                Receipt();
-                break;
-            case 2:
-                order();
-                break;
-            case 3:
-                Cancel();
-                break;
+            switch (out) {
+                case 1:
+                    Receipt();
+                    break loop;
+                case 2:
+                    order();
+                    break loop;
+                case 3:
+                    Cancel();
+                    break loop;
+            }
         }
     }
 

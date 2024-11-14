@@ -37,57 +37,58 @@ public class AddDrinks{
     }
 
     public static String drinkSize() throws IOException {
-        int drinkSize = ans("Select a drink size below \n" +
-                "\n( 1 ) - Small ( $2.00 )\n" +
-                "( 2 ) - Medium ( $ 2.50 )\n" +
-                "( 3 ) - Large ( $3.00 )\n" +
-                "( 99 ) - Exit");
-        switch (drinkSize){
-            case 1:
-                return "Small";
-            case 2:
-                return "Medium";
-            case 3:
-                return "Large";
-            case 99 :
-                order();
-                break;
-            default:
-                System.out.println("That was not a proper choice. Enter again :)\n");
-                drinkSize();
+       loop: while (true) {
+            int drinkSize = ans("Select a drink size below \n" +
+                    "\n( 1 ) - Small ( $2.00 )\n" +
+                    "( 2 ) - Medium ( $ 2.50 )\n" +
+                    "( 3 ) - Large ( $3.00 )\n" +
+                    "( 99 ) - Exit");
+            switch (drinkSize) {
+                case 1:
+                    return "Small";
+                case 2:
+                    return "Medium";
+                case 3:
+                    return "Large";
+                case 99:
+                    order();
+                    break loop;
+                default:
+                    System.out.println("That was not a proper choice. Enter again :)\n");
+            }
         }
         return "";
     }
     public static String drinkName() throws IOException {
-        int drinkSize = ans("Select a drink below \n" +
-                "\n( 1 ) - Coke           ( 5 ) - Coffee\n" +
-                "( 2 ) - Sprite         ( 6 ) - Tea\n" +
-                "( 3 ) - Dr. Pepper     ( 0 ) - Water\n" +
-                "( 4 ) - Orange Juice");
-        switch (drinkSize){
-            case 1:
-                return "Coke";
-            case 2:
-                return "Sprite";
-            case 3:
-                return "Dr. Pepper";
-            case 4:
-                return "Orange Juice";
-            case 5:
-                return "Coffee";
-            case 6:
-                return "Tea";
-            case 0:
-                return "Water";
-            default:
-                System.out.println("That was not a proper choice. Enter again :)\n");
-                drinkSize();
+        loop: while (true) {
+            int drinkSize = ans("Select a drink below \n" +
+                    "\n( 1 ) - Coke           ( 5 ) - Coffee\n" +
+                    "( 2 ) - Sprite         ( 6 ) - Tea\n" +
+                    "( 3 ) - Dr. Pepper     ( 0 ) - Water\n" +
+                    "( 4 ) - Orange Juice   ( 99 )- Exit");
+            switch (drinkSize) {
+                case 1:
+                    return "Coke";
+                case 2:
+                    return "Sprite";
+                case 3:
+                    return "Dr. Pepper";
+                case 4:
+                    return "Orange Juice";
+                case 5:
+                    return "Coffee";
+                case 6:
+                    return "Tea";
+                case 0:
+                    return "Water";
+                case 99:
+                    order();
+                    break loop;
+                default:
+                    System.out.println("That was not a proper choice. Enter again :)\n");
+            }
         }
         return "";
-    }
-
-    public static List<Drinks> getDrinks(){
-        return drinks;
     }
 
 }
