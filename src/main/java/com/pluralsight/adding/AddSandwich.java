@@ -23,7 +23,6 @@ public class AddSandwich extends Orderable {
         sandwich.addPremiumToppings(premiumToppings());
         sandwich.addCheese(cheese());
         sandwich.addRegularToppings(regularToppings());
-        sandwich.addRegularToppings(sauces());
         sandwich.toast();
 
         sandwiches.add(sandwich);
