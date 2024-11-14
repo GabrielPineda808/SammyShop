@@ -8,7 +8,7 @@ import static com.pluralsight.Screens.OrderScreen.order;
 public class Bread {
     public static String bread() throws IOException {
         int breadChoice = ans("What bread would you like today? Please enter below.\n" +
-                "( 1 ) - White\n" +
+                "\n( 1 ) - White\n" +
                 "( 2 ) - Wheat\n" +
                 "( 3 ) - Rye\n" +
                 "( 4 ) - Wrap\n" +

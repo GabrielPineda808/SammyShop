@@ -16,7 +16,7 @@ public class Toppings {
         System.out.println("\nPlease select your toppings below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What toppings would you like on your sandwich? \n" +
-                    "( 1 ) - Lettuce      ( 6 ) - Cucumbers\n" +
+                    "\n( 1 ) - Lettuce      ( 6 ) - Cucumbers\n" +
                     "( 2 ) - Peppers      ( 7 ) - Pickles\n" +
                     "( 3 ) - Onions       ( 8 ) - Guacamole\n" +
                     "( 4 ) - Tomatoes     ( 9 ) - Mushrooms\n" +
@@ -71,7 +71,7 @@ public class Toppings {
 
         loop: while (true){
             int topping = ans("What meat would you like on your sandwich? \n" +
-                    "( 1 ) - Steak      ( 6 ) - Bacon\n" +
+                    "\n( 1 ) - Steak      ( 6 ) - Bacon\n" +
                     "( 2 ) - Ham        ( 0 ) - Done with Toppings\n" +
                     "( 3 ) - Salami     ( 99 )- Exit\n" +
                     "( 4 ) - Roast Beef\n" +
@@ -103,7 +103,7 @@ public class Toppings {
                     order();
                     break;
                 default:
-                    System.out.println("That was not a proper topping choice. Enter again :)");
+                    System.out.println("\nThat was not a proper topping choice. Enter again :)\n");
             }
         }
 
@@ -116,7 +116,7 @@ public class Toppings {
 
         loop: while (true){
             int c = ans("What cheese would you like on your sandwich? \n" +
-                    "( 1 ) - American\n" +
+                    "\n( 1 ) - American\n" +
                     "( 2 ) - Provolone\n" +
                     "( 3 ) - Cheddar\n" +
                     "( 4 ) - Swiss\n" +
@@ -143,7 +143,7 @@ public class Toppings {
                     order();
                     break;
                 default:
-                    System.out.println("That was not a proper cheese choice. Enter again :)");
+                    System.out.println("\nThat was not a proper cheese choice. Enter again :)\n");
             }
         }
         return cheeses;
@@ -153,7 +153,7 @@ public class Toppings {
         System.out.println("\nPlease select any sauces or sides below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What sauce or side would you like on your sandwich? \n" +
-                    "( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
+                    "\n( 1 ) - Mayo               ( 6 ) - Vinaigrette\n" +
                     "( 2 ) - Mustard            ( 7 ) - Au Jus\n" +
                     "( 3 ) - Ketchup            ( 8 ) - Sauce\n" +
                     "( 4 ) - Ranch              ( 0 ) - Done with Toppings\n" +
