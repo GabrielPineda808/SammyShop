@@ -37,8 +37,8 @@ public class Sandwich extends Orderable {
     }
 
     public void toast() {
-        int toasted = ans("\n Would like your sandwich toasted? \n" +
-                "( 1 ) - Yes \n" +
+        int toasted = ans("\nWould like your sandwich toasted? \n" +
+                "\n( 1 ) - Yes \n" +
                 "( 2 ) - No \n");
         if(toasted == 1){
             isToasted= true;
