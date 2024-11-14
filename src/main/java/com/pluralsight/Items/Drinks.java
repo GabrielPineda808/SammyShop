@@ -53,6 +53,7 @@ public class Drinks extends Orderable {
         Formatter formatter = new Formatter(newStr);
         formatter.format(size + " " + name + "    ----%.2f----\n", price);
         newStr.append("\n---------------------\n");
+        return newStr.toString();
     }
 
     @Override
