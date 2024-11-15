@@ -19,20 +19,27 @@ public class Custom extends Sandwich {
         super(bread, isToasted, size, regularTopping, premiumTopping, cheese);
     }
 
-    public static Sandwich addCustom(int sam) throws IOException {
+    public static void addCustom(int sam) throws IOException {
+        Sandwich custom;
+        top.clear();
 
         switch (sam){
             case 1:
                 top.addAll(List.of("Lettuce","Tomatoes","Ranch"));
                 aorTop();
-                return new Custom("White", true, 8,top,List.of("Bacon"),List.of("Cheddar"));
+                ArrayList<String> bltTop = new ArrayList<>(top);
+                custom = new Custom("White", true, 8,bltTop,List.of("Bacon"),List.of("Cheddar"));
+                orderables.add(custom);
+                break;
             case 2:
                 top.addAll(List.of("Peppers", "Mayo"));
                 aorTop();
-                return new Custom("White", true, 8,top,List.of("Steak"),List.of("American Cheese"));
+                ArrayList<String> pTop = new ArrayList<>(top);
+                custom = new Custom("White", true, 8,pTop,List.of("Steak"),List.of("American Cheese"));
+                orderables.add(custom);
+                break;
         }
 
-        return new Custom("White", true, 8,top,List.of("Bacon"),List.of("Cheddar"));
     }
 
 
@@ -48,7 +55,9 @@ public class Custom extends Sandwich {
         loop: while (true) {
             System.out.println("\nWhich topping would you like to remove ?\n");
             for (String t : top) {
-                System.out.println("( " + (top.indexOf(t) + 1) + " ) - " + t);
+                if(!t.equals(" ")) {
+                    System.out.println("( " + (top.indexOf(t) + 1) + " ) - " + t);
+                }
             }
             System.out.println("( 99 )- Exit\n");
             int ans = ans("Enter here:\n");
@@ -73,7 +82,7 @@ public class Custom extends Sandwich {
                        System.out.println("\nThat was not an option.\n");
 
                }
-            } catch (ArrayIndexOutOfBoundsException e) {
+            } catch (IndexOutOfBoundsException e){
                 System.out.println("\nThat is not a proper topping choice to remove.\n");
             } catch (IOException e) {
                 throw new RuntimeException(e);

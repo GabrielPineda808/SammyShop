@@ -35,18 +35,18 @@ public class Checkout {
 
         for(Orderable o: orderables){
             if( o instanceof Sandwich) {
-                total += ((Sandwich) o).getPrice();
-                System.out.println(((Sandwich) o).display());
+                total += o.getPrice();
+                System.out.println(o.display());
             } else if (o instanceof Drinks) {
-                total += ((Drinks) o).getPrice();
-                System.out.println(((Drinks) o).display());
+                total += (o.getPrice());
+                System.out.println(o.display());
 
             } else if ( o instanceof Chips){
-                total += ((Chips) o).getPrice();
-                System.out.println(((Chips) o).display());
+                total += o.getPrice();
+                System.out.println(o.display());
             }
         }
-        System.out.printf("Total: $ %.2f\n" ,total);
+        System.out.printf("%-30s: $ %.2f\n" ,"Total",total);
 
         loop : while (true) {
             int out = ans("\nCheckout is almost complete! Please enter an option below\n" +
@@ -80,12 +80,12 @@ public class Checkout {
         bw.write("Receipt for order on " + now +"\n");
         for(Orderable o: orderables){
             if( o instanceof Sandwich) {
-                bw.write(((Sandwich) o).display());
+                bw.write(o.display());
             } else if (o instanceof Drinks) {
-                bw.write(((Drinks) o).display());
+                bw.write(o.display());
 
             } else if ( o instanceof Chips){
-                bw.write(((Chips) o).display());
+                bw.write(o.display());
             }
         }
         bw.write(String.valueOf(formatter.format("Total: $ %.2f\n" ,total)));

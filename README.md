@@ -50,6 +50,7 @@ to letting the user know they ordered the toppings more than once without adding
 
 ## Diagrams
 
+![UML diagrams.jpeg](ScreenShots%2FUML%20diagrams.jpeg)
 
 ## Authors
 

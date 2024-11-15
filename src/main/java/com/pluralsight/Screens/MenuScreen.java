@@ -18,12 +18,11 @@ public class MenuScreen {
 
            switch (subChoice) {
                case 1:
-                   top.clear();
-                   orderables.add(addCustom(1));
+                   addCustom(1);
                    order();
                    break loop;
                case 2:
-                   orderables.add(addCustom(2));
+                   addCustom(2);
                    order();
                    break loop;
                case 99:
