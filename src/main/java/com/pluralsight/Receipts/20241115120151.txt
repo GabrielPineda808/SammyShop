@@ -1,0 +1,35 @@
+Receipt for order on 2024-11-15T12:01:51.837606200
+8 inch Sandwich on White       ----10.50----
+   Toasted
+   Meat: 
+    -Bacon
+   Cheese: 
+    -Cheddar
+   Toppings and Sauce:
+    -Ranch (Extra)
+    -Jalapenos
+
+---------------------
+8 inch Sandwich on White       ----13.10----
+   Toasted
+   Meat: 
+    -Steak (Extra)
+    -Ham
+   Cheese: 
+    -Swiss (Extra)
+   Toppings and Sauce:
+    -Guacamole (Extra)
+    -Mayo
+    -Ranch
+
+---------------------
+Large Coke                     ----3.00----
+
+---------------------
+Small Sprite                   ----2.00----
+
+---------------------
+Hot Fries                      ----1.50----
+
+---------------------
+Total: $ 30.10

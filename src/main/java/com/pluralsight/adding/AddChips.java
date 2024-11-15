@@ -1,6 +1,7 @@
 package com.pluralsight.adding;
-
+import static com.pluralsight.Items.Orderable.orderables;
 import com.pluralsight.Items.Chips;
+import com.pluralsight.Items.Orderable;
 import com.pluralsight.Items.Sandwich;
 
 import java.io.IOException;
@@ -11,13 +12,12 @@ import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
 public class AddChips{
-    public static List<Chips> chips = new ArrayList<>();
     public static void addChips() throws IOException {
         System.out.println("\nHere we will add your chips :) \n");
 
         Chips chip = new Chips(chipsName());
 
-        chips.add(chip);
+        orderables.add(chip);
 
         loop : while (true){
             System.out.println("\nWould you like to more chips? \n");
@@ -69,7 +69,4 @@ public class AddChips{
         return "";
     }
 
-    public static List<Chips> getChips(){
-        return chips;
-    }
 }

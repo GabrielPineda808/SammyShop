@@ -1,6 +1,7 @@
 package com.pluralsight.adding;
-
+import static com.pluralsight.Items.Orderable.orderables;
 import com.pluralsight.Items.Drinks;
+import com.pluralsight.Items.Orderable;
 import com.pluralsight.Items.Sandwich;
 
 import java.io.IOException;
@@ -10,13 +11,13 @@ import java.util.List;
 import static com.pluralsight.GlobalMethods.ans;
 import static com.pluralsight.Screens.OrderScreen.order;
 
-public class AddDrinks{
-    public static List<Drinks> drinks = new ArrayList<>();
+public class AddDrinks {
+
     public static void addDrinks() throws IOException {
         System.out.println("\nHere we will add your drinks :)\n");
         Drinks drink = new Drinks(drinkSize(),drinkName());
 
-        drinks.add(drink);
+        orderables.add(drink);
         loop : while (true){
             System.out.println("\nWould you like to add another drink? \n");
             int choice = ans("( 1 ) - Yes\n" +

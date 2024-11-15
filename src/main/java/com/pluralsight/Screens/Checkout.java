@@ -2,6 +2,7 @@ package com.pluralsight.Screens;
 
 import com.pluralsight.Items.Chips;
 import com.pluralsight.Items.Drinks;
+import com.pluralsight.Items.Orderable;
 import com.pluralsight.Items.Sandwich;
 
 import java.io.BufferedWriter;
@@ -13,37 +14,37 @@ import java.time.format.DateTimeFormatter;
 import java.util.Formatter;
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.Items.Orderable.orderables;
 import static com.pluralsight.Screens.HomeScreen.home;
 import static com.pluralsight.Screens.OrderScreen.order;
 import static com.pluralsight.Screens.Cancel.Cancel;
-import static com.pluralsight.adding.AddChips.chips;
-import static com.pluralsight.adding.AddDrinks.drinks;
-import static com.pluralsight.adding.AddSandwich.sandwiches;
 
 public class Checkout {
     static double total;
     public static void checkout() throws IOException {
         total = 0;
         System.out.println("\nLets make sure everything is right before we checkout :)\n" +
-                "\n Please read over your order and order cost before you proceed with checkout.\n");
+                "\nPlease read over your order and order cost before you proceed with checkout.\n");
 
-        if(chips.isEmpty() && drinks.isEmpty() && sandwiches.isEmpty()){
+        if(orderables.isEmpty()){
             System.out.println("\nThere is nothing here to checkout! Order before giving your money away ;)\n");
             order();
         }
 
-        for(Sandwich s: sandwiches){
-            total += s.getPrice();
-            System.out.println(s.display());
 
-        }
-        for (Drinks drink : drinks){
-           total += drink.getPrice();
-            System.out.println(drink.display());
-        }
-        for(Chips chip: chips){
-            total += chip.getPrice();
-            System.out.println(chip.display());
+
+        for(Orderable o: orderables){
+            if( o instanceof Sandwich) {
+                total += ((Sandwich) o).getPrice();
+                System.out.println(((Sandwich) o).display());
+            } else if (o instanceof Drinks) {
+                total += ((Drinks) o).getPrice();
+                System.out.println(((Drinks) o).display());
+
+            } else if ( o instanceof Chips){
+                total += ((Chips) o).getPrice();
+                System.out.println(((Chips) o).display());
+            }
         }
         System.out.printf("Total: $ %.2f\n" ,total);
 
@@ -77,20 +78,19 @@ public class Checkout {
         BufferedWriter bw = new BufferedWriter(fw);
         Formatter formatter = new Formatter();
         bw.write("Receipt for order on " + now +"\n");
-        for(Sandwich s: sandwiches){
-            bw.write(s.display());
-        }
-        for (Drinks drink : drinks){
-            bw.write(drink.display());
-        }
-        for(Chips chip: chips){
-            bw.write(chip.display());
+        for(Orderable o: orderables){
+            if( o instanceof Sandwich) {
+                bw.write(((Sandwich) o).display());
+            } else if (o instanceof Drinks) {
+                bw.write(((Drinks) o).display());
+
+            } else if ( o instanceof Chips){
+                bw.write(((Chips) o).display());
+            }
         }
         bw.write(String.valueOf(formatter.format("Total: $ %.2f\n" ,total)));
         bw.close();
-        sandwiches.clear();
-        drinks.clear();
-        chips.clear();
+        orderables.clear();
         home();
     }
 }

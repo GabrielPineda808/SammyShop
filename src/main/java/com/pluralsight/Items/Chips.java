@@ -18,6 +18,7 @@ public class Chips extends Orderable {
         this.name = name;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
@@ -26,6 +27,7 @@ public class Chips extends Orderable {
         this.price = price;
     }
 
+    @Override
     public String display(){
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);

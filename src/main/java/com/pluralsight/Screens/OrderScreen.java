@@ -1,15 +1,19 @@
 package com.pluralsight.Screens;
 
 import java.io.IOException;
+
+import static com.pluralsight.Screens.MenuScreen.viewMenu;
+import static com.pluralsight.SandwhichMaterials.Toppings.*;
 import static com.pluralsight.Screens.Checkout.checkout;
 import static com.pluralsight.adding.AddChips.addChips;
 import static com.pluralsight.adding.AddDrinks.addDrinks;
-import static com.pluralsight.adding.AddSandwich.AddSammy;
 import static com.pluralsight.GlobalMethods.ans;
 
 public class OrderScreen {
     public static void order() throws IOException {
-
+        regularToppings.clear();
+        premiumToppings.clear();
+        cheeses.clear();
         loop : while (true) {
             int orderChoice = ans("\nHow may we help you today? Please select an option below :)\n" +
                     "\n( 1 ) - Add Sandwich\n" +
@@ -19,7 +23,7 @@ public class OrderScreen {
                     "( 5 ) - Cancel Order\n");
             switch (orderChoice) {
                 case 1:
-                    AddSammy();
+                    viewMenu();
                     break loop;
                 case 2:
                     addDrinks();

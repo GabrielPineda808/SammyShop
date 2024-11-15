@@ -1,16 +1,18 @@
 package com.pluralsight.Items;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.List;
 
 import static com.pluralsight.GlobalMethods.ans;
+import static com.pluralsight.Screens.OrderScreen.order;
 
 public class Sandwich extends Orderable {
-    private String bread;
-    private boolean isToasted = false;
-    private int size;
-    private double price;
+    String bread;
+    boolean isToasted = false;
+    int size;
+    double price;
     List<String> regularTopping = new ArrayList<>();
     List<String> premiumTopping = new ArrayList<>();
     List<String> cheese = new ArrayList<>();
@@ -18,6 +20,15 @@ public class Sandwich extends Orderable {
     public Sandwich(String bread,int size ) {
         this.bread = bread;
         this.size = size;
+    }
+
+    public Sandwich(String bread, boolean isToasted, int size, List<String> regularTopping, List<String> premiumTopping, List<String> cheese) {
+        this.bread = bread;
+        this.isToasted = isToasted;
+        this.size = size;
+        this.regularTopping = regularTopping;
+        this.premiumTopping = premiumTopping;
+        this.cheese = cheese;
     }
 
     public int getSize() {
@@ -36,19 +47,27 @@ public class Sandwich extends Orderable {
         this.bread = bread;
     }
 
-    public void toast() {
-        int toasted = ans("\nWould like your sandwich toasted? \n" +
-                "\n( 1 ) - Yes \n" +
-                "( 2 ) - No \n");
-        if(toasted == 1){
-            isToasted= true;
-        }else if( toasted != 2) {
-            System.out.println("\nEnter a proper toasting options :)\n");
-            toast();
+    public void toast() throws IOException {
+        loop: while(true) {
+            int toasted = ans("\nWould like your sandwich toasted? \n" +
+                    "\n( 1 ) - Yes \n" +
+                    "( 2 ) - No \n" +
+                    "( 99 )- Exit\n");
+            if (toasted == 1) {
+                isToasted = true;
+                break;
+            }else if(toasted == 99){
+                order();
+                break ;
+            }else if (toasted == 2) {
+                break;
+            }else{
+                System.out.println("\nEnter a proper toasting options :)\n");
+            }
         }
-
     }
 
+    @Override
     public double getPrice() {
         switch (this.size){
             case 4:
@@ -107,6 +126,7 @@ public class Sandwich extends Orderable {
         }
     }
 
+    @Override
     public String display(){
         StringBuilder newStr = new StringBuilder();
         Formatter formatter = new Formatter(newStr);
@@ -116,15 +136,21 @@ public class Sandwich extends Orderable {
         }
         if(!premiumTopping.isEmpty()){newStr.append("   Meat: \n");}
         for(String t : premiumTopping){
-            newStr.append("    -"+t+"\n");
+            if(!t.equals(" ")) {
+                newStr.append("    -" + t + "\n");
+            }
         }
         if(!cheese.isEmpty()){newStr.append("   Cheese: \n");}
         for(String c : cheese){
-            newStr.append("    -" + c + "\n");
+            if(!c.equals(" ")) {
+                newStr.append("    -" + c + "\n");
+            }
         }
         if(!regularTopping.isEmpty()){newStr.append("   Toppings and Sauce:\n");}
         for (String t : regularTopping){
-            newStr.append("    -"+ t +"\n");
+            if(!t.equals(" ")) {
+                newStr.append("    -" + t + "\n");
+            }
         }
 
         newStr.append("\n---------------------\n");

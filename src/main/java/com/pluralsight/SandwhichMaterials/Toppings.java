@@ -12,7 +12,7 @@ public class Toppings {
     public static List<String> premiumToppings = new ArrayList<>();
     public static List<String> cheeses = new ArrayList<>();
 
-    public static List<String> regularToppings() throws IOException {
+    public static void regularToppings(List<String> list) throws IOException {
         System.out.println("\nPlease select your toppings below. They are free with your order!\n");
         loop: while (true) {
             int topping = ans("What toppings would you like on your sandwich? \n" +
@@ -26,31 +26,31 @@ public class Toppings {
 
             switch (topping) {
                 case 1:
-                    checkTopping(regularToppings,"Lettuce");
+                    checkTopping(list,"Lettuce");
                     break;
                 case 2:
-                    checkTopping(regularToppings,"Peppers ");
+                    checkTopping(list,"Peppers ");
                     break;
                 case 3:
-                    checkTopping(regularToppings,"Onions");
+                    checkTopping(list,"Onions");
                     break;
                 case 4:
-                    checkTopping(regularToppings,"Tomatoes");
+                    checkTopping(list,"Tomatoes");
                     break;
                 case 5:
-                    checkTopping(regularToppings,"Jalapenos");
+                    checkTopping(list,"Jalapenos");
                     break;
                 case 6:
-                    checkTopping(regularToppings,"Cucumbers");
+                    checkTopping(list,"Cucumbers");
                     break;
                 case 7:
-                    checkTopping(regularToppings,"Pickles");
+                    checkTopping(list,"Pickles");
                     break;
                 case 8:
-                    checkTopping(regularToppings,"Guacamole");
+                    checkTopping(list,"Guacamole");
                     break;
                 case 9:
-                    checkTopping(regularToppings,"Mushrooms");
+                    checkTopping(list,"Mushrooms");
                     break;
                 case 0:
                     System.out.println("All toppings have been added.\n");
@@ -74,28 +74,28 @@ public class Toppings {
 
             switch (topping) {
                 case 1:
-                    checkTopping(regularToppings,"Mayo");
+                    checkTopping(list,"Mayo");
                     break;
                 case 2:
-                    checkTopping(regularToppings,"Mustard");
+                    checkTopping(list,"Mustard");
                     break;
                 case 3:
-                    checkTopping(regularToppings,"Ketchup");
+                    checkTopping(list,"Ketchup");
                     break;
                 case 4:
-                    checkTopping(regularToppings,"Ranch");
+                    checkTopping(list,"Ranch");
                     break;
                 case 5:
-                    checkTopping(regularToppings,"Thousand Islands");
+                    checkTopping(list,"Thousand Islands");
                     break;
                 case 6:
-                    checkTopping(regularToppings,"Vinaigrette");
+                    checkTopping(list,"Vinaigrette");
                     break;
                 case 7:
-                    checkTopping(regularToppings,"Side of Au jus");
+                    checkTopping(list,"Side of Au jus");
                     break;
                 case 8:
-                    checkTopping(regularToppings,"Side of Sauce");
+                    checkTopping(list,"Side of Sauce");
                     break;
                 case 0:
                     System.out.println("\nAll sauces have been added.");
@@ -107,7 +107,6 @@ public class Toppings {
                     System.out.println("\nThat was not a proper choice. Enter again :)");
             }
         }
-        return regularToppings;
     }
 
     public static List<String> premiumToppings() throws IOException {
@@ -195,10 +194,13 @@ public class Toppings {
     }
 
     public static void checkTopping (List<String> list, String topping){
-        if(!list.contains(topping)){
+        if(!list.contains(topping) && !list.contains((topping + " (Extra)") )){
             list.add(topping);
-        }else {
-            list.set(list.indexOf(topping), topping + " (Extra)" );
+        }else if(list.contains(topping)){
+            list.set(list.indexOf(topping), (topping + " (Extra)") );
+            list.add(" ");
+        }else{
+            list.add(" ");
         }
     }
 }

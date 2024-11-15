@@ -1,0 +1,44 @@
+Receipt for order on 2024-11-15T11:20:12.912636100
+Hot Cheetos                    ----1.50----
+
+---------------------
+Doritos                        ----1.50----
+
+---------------------
+Small Sprite                   ----2.00----
+
+---------------------
+Large Sprite                   ----3.00----
+
+---------------------
+8 inch Sandwich on White       ----10.50----
+   Toasted
+   Meat: 
+    -Bacon
+   Cheese: 
+    -Cheddar
+
+---------------------
+4 inch Sandwich on White       ----7.25----
+   Toasted
+   Meat: 
+    -Steak
+   Cheese: 
+    -American
+   Toppings and Sauce:
+    -Lettuce
+    -Peppers 
+    -Mayo
+    -Mustard
+    -Ketchup
+
+---------------------
+8 inch Sandwich on White       ----10.50----
+   Toasted
+   Meat: 
+    -Bacon
+   Cheese: 
+    -Cheddar
+
+---------------------
+Total: $ 36.25
